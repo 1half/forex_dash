@@ -16,7 +16,7 @@ cur_s=list(cur_s)
 #cur_list = requests.get(cur_list_url).json()
 #cur_s = list(cur_list.values())[0]
 
-st.title(":blue[Forex Dashboard]", anchor=None)
+st.title(":blue[Currency Exchange Rates]", anchor=None)
 st.write("""   
                 ## Historical currency rates
                 source: TraderMade
