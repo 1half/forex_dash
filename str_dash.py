@@ -67,7 +67,7 @@ if endpoints== 'timeseries':
         df = pd.DataFrame(data["quotes"])
     #st.dataframe to display df.  
         st.dataframe(df,use_container_width = True)
-        st.header(f"Value of {data["quote_currency"]} against {data["base_currency"]}",
+        st.header(f"""Value of {data["quote_currency"]} against {data["base_currency"]}""",
                 help="Scroll in the chart to zoom in, click and drag to move with in the chart")
         st.line_chart(data=df, x='date', y='close', color='#ADD8E6', use_container_width=True)
     except:
