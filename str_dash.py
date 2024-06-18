@@ -35,8 +35,10 @@ if endpoints== 'timeseries':
                                    max_value=today,
                                    min_value=date(2010,1,1),
                                     format="YYYY-MM-DD")
-    end_date = st.sidebar.date_input("End date",start_date+delta_date,
-                                   max_value=start_date+delta_date,
+    default_end = (lambda x, y: y if x >= y else x)(start_date+delta_date, today)
+
+    end_date = st.sidebar.date_input("End date",default_end,
+                                   max_value=default_end,
                                    min_value=start_date,
                                     format="YYYY-MM-DD")
 
